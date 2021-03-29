@@ -11,7 +11,6 @@ const theme = {
   lightOrange: 'rgba(255,195,170,0.3)',
   fontColor: '#2D2B2B',
   fontTitle: "'Alata', sans-serif;",
-  fontContent: "'Noto Sans KR', sans-serif;",
 };
 
 export default theme;

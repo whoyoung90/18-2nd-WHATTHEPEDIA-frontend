@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { GlobalStyle } from './Styles/globalStyle';
+import GlobalStyle from './Styles/globalStyle';
+import theme from './Styles/theme';
 import { ThemeProvider } from 'styled-components';
-import { theme } from './Styles/theme';
 import Routes from './Routes';
-import './Styles/reset.scss';
-import './Styles/common.scss';
 
 ReactDOM.render(
   <>
