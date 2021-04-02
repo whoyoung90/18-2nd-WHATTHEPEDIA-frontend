@@ -51,7 +51,7 @@ export default function Modal() {
           method: 'POST',
           body: JSON.stringify({
             email: signInput.email,
-            username: signInput.name,
+            name: signInput.name,
             password: signInput.password,
           }),
         })
