@@ -4,6 +4,7 @@ import { FaStar } from 'react-icons/fa';
 
 class TotalAssess extends React.Component {
   render() {
+    const { movie } = this.props;
     return (
       <Container>
         지금까지&nbsp;
