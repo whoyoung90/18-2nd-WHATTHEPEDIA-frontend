@@ -23,7 +23,6 @@ export default function Form({
             text={input.text}
             value={input.text}
             inputValue={inputValue[input.type]}
-            onReset={onReset}
             handleChange={handleChange}
           />
         ))}
