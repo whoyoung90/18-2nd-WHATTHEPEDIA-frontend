@@ -21,7 +21,7 @@ export default function Login() {
           .then(res => {
             localStorage.setItem('access_token', res.access_token);
             if (res.access_token) {
-              alert('로그인 성공!');
+              alert('로그인 성공!!');
               history.push('/');
               console.log('토큰:', res.access_token);
             }
