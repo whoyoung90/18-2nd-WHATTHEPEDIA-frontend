@@ -8,6 +8,14 @@
       href="https://fonts.googleapis.com/earlyaccess/notosanskr.css"
     />
     <title>What The Pedia</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+      Kakao.init('e7f59ef4b4900fe5aa839fcbe7c5ceb7');
+      Kakao.isInitialized();
+      console.log('카카오 초기화 여부:', Kakao.isInitialized());
+    </script>
   </head>
   <body>
     <div id="root"></div>
