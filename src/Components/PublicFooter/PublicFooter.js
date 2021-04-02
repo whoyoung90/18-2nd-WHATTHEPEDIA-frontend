@@ -15,13 +15,14 @@ class PublicFooter extends React.Component {
 }
 
 const Footer = styled.div`
-  border: 1px solid black;
+  position: absolute;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: fixed;
-  bottom: 0;
   width: 100%;
+  height: 275px;
+  border: 1px solid black;
   background-color: #1c1d1f;
 `;
 export default PublicFooter;
