@@ -8,11 +8,13 @@ ${reset}
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  position: relative;
 }
 
 body{
   font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Malgun Gothic', sans-serif;
   box-sizing: border-box;
+  position: relative;
 }
 
 button:hover{
