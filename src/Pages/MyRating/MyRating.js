@@ -76,7 +76,7 @@ const Fix = styled.div`
   position: fixed;
   margin-top: 62px;
   width: 100%;
-  z-index: 100;
+  z-index: 1;
 `;
 
 const Sort = styled.div`

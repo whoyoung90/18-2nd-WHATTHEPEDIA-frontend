@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { BsSearch } from 'react-icons/bs';
+import { BsSearch, BsFillXCircleFill } from 'react-icons/bs';
+import { config } from '../../config.js';
 import Modal from '../Modal/Modal';
+import SearchModal from '../Nav/SearchModal/SearchModal';
 
 export default function Nav() {
   const MENU_ITEMS = [
@@ -13,7 +15,19 @@ export default function Nav() {
   const [isMember, setIsMember] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [movies, setMovies] = useState([]);
+  const [userInput, setUserInput] = useState({ keyword: '' });
+  const [showSearchModal, setShowSearchModal] = useState(false);
 
+  useEffect(() => {
+    getMovies();
+  }, [userInput]);
+
+  const getMovies = () => {
+    fetch(`${config.api}/movie/autocomplete?query=${userInput.keyword}`)
+      .then(res => res.json())
+      .then(data => setMovies(data.result));
+  };
   const useScroll = () => {
     const [moveScroll, setMoveScroll] = useState({ x: 0, y: 0 });
     const onScroll = e => {
@@ -71,6 +85,28 @@ export default function Nav() {
     setShowModal(true);
   };
 
+  // mockdata 사용 시 자체 필터링 (SearchModal props 변경 필요)
+  // const filteredMovies = movies.filter(data => {
+  //   return data.title.toLowerCase().includes(userInput.toLowerCase());
+  // });
+
+  const onSearchModal = e => {
+    setShowSearchModal(true);
+  };
+
+  const offSearchModal = e => {
+    setShowSearchModal(false);
+  };
+
+  const changeKeyword = e => {
+    setUserInput({ keyword: e.target.value });
+    // getMovies();
+  };
+
+  const resetKeyword = e => {
+    setUserInput({ keyword: '' });
+  };
+
   return (
     <>
       {showModal && (
@@ -86,6 +122,7 @@ export default function Nav() {
           handleModal={handleModal}
         />
       )}
+
       <NavContainer isNavTop={isNavTop()}>
         <MenuWrapper>
           <MenuList>
@@ -101,12 +138,29 @@ export default function Nav() {
                 </NavList>
               );
             })}
+
             <SearchBar isNavTop={isNavTop()}>
               <SearchIcon isNavTop={isNavTop()}>
                 <BsSearch />
               </SearchIcon>
-              <Search isNavTop={isNavTop()} />
+              <Search
+                isNavTop={isNavTop()}
+                value={userInput.keyword}
+                onChange={changeKeyword}
+                onClick={onSearchModal}
+              />
+              {userInput.keyword !== '' && (
+                <DeleteKeyword onClick={resetKeyword}>
+                  <BsFillXCircleFill />
+                </DeleteKeyword>
+              )}
+              <SearchModal
+                userInput={userInput}
+                movies={movies}
+                showSearchModal={showSearchModal}
+              />
             </SearchBar>
+
             <NavList>
               {isLogin ? (
                 <Button as="a" isNavTop={isNavTop()}>
@@ -129,13 +183,23 @@ export default function Nav() {
                 </SignUp>
               )}
             </NavList>
-            <NavList></NavList>
           </MenuList>
         </MenuWrapper>
+        <SearchModalBackground onClick={offSearchModal} />
       </NavContainer>
     </>
   );
 }
+
+const SearchModalBackground = styled.div`
+  display: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 62px;
+  background-color: transparent;
+`;
 
 const NavContainer = styled.nav`
   position: fixed;
@@ -169,6 +233,7 @@ const MenuList = styled.div`
 const HomeButton = styled.button`
   width: auto;
   height: auto;
+  z-index: 1;
 `;
 
 const NavLogo = styled.img.attrs(props => ({
@@ -192,6 +257,7 @@ const NavList = styled.li`
     props.isNavTop ? 'rgb(126, 126, 126)' : 'rgb(255, 255, 255)'};
   text-align: center;
   text-decoration: none;
+  z-index: 1;
 `;
 
 const Button = styled.button`
@@ -207,6 +273,7 @@ const Button = styled.button`
     props.isNavTop ? 'rgb(126, 126, 126)' : 'rgba(255, 255, 255, 0.7)'};
   text-decoration: none;
   cursor: pointer;
+  z-index: 1;
 
   &:active,
   &:hover {
@@ -217,9 +284,10 @@ const Button = styled.button`
 const SearchBar = styled.div`
   position: relative;
   display: block;
-  width: auto;
+  width: 300px;
   height: auto;
   margin: 0 0 0 auto;
+  z-index: 1;
 `;
 
 const Search = styled.input.attrs(props => ({
@@ -231,8 +299,7 @@ const Search = styled.input.attrs(props => ({
     : 'rgba(255, 255, 255, 0.7)',
 }))`
   display: inline-block;
-  width: auto;
-  min-width: 300px;
+  width: 300px;
   height: 38px;
   margin: 12px 0;
   padding: 7px 10px 8px 30px;
@@ -267,6 +334,22 @@ const SearchIcon = styled.div`
   }
 `;
 
+const DeleteKeyword = styled.div`
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 23px;
+  right: 16px;
+  margin: 0px 0px 0px 24px;
+  z-index: 100;
+  cursor: pointer;
+  svg {
+    width: 14px;
+    height: 14px;
+    color: rgba(116, 116, 123, 0.5);
+  }
+`;
+
 const SignUp = styled.button`
   display: flex;
   justify-content: center;
@@ -286,6 +369,7 @@ const SignUp = styled.button`
     props.isNavTop ? 'rgb(126, 126, 126)' : 'rgba(255, 255, 255, 0.7)'};
   text-decoration: none;
   cursor: pointer;
+  z-index: 1;
 
   &:active,
   &:hover {
@@ -299,10 +383,12 @@ const UserIcon = styled.button`
   align-items: center;
   width: 40px;
   height: 40px;
+  z-index: 1;
 `;
 
 const UserImg = styled.img`
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  z-index: 1;
 `;
