@@ -35,7 +35,7 @@ export default function Modal({
 
   const handleChange = e => {
     const { name, value } = e.target;
-    isLogin
+    isMember
       ? setLoginInput({ ...loginInput, [name]: value })
       : setSignInput({ ...signInput, [name]: value });
   };
@@ -49,7 +49,8 @@ export default function Modal({
   const submitData = () => {
     const isIdValid = /^[A-Za-z0-9][A-Za-z0-9._-]+[@]{1}[a-z]+[.]{1}[a-z]{1,4}$/;
     const isPwValid = /^(?=.*[a-zA-Z])((?=.*\d)|(?=.*\W)).{10,20}$/;
-
+    console.log('✅login', loginInput);
+    console.log('✅login', signInput);
     if (
       isIdValid.test(loginInput.email || signInput.email) &&
       isPwValid.test(loginInput.password || signInput.password)
@@ -103,30 +104,45 @@ export default function Modal({
   };
 
   return (
-    <ModalContainer onClick={handleModal}>
-      <Form
-        onClick={e => e.stopPropagation()}
-        kakaoBtn={kakaoBtn}
-        handleChange={handleChange}
-        handleLogin={handleLogin}
-        resetInput={resetInput}
-        submitData={submitData}
-        format={isMember ? LOGIN : SIGNUP}
-        inputValue={isLogin ? loginInput : signInput}
-      />
-      ;
-    </ModalContainer>
+    <ModalBackground onClick={handleModal}>
+      <ModalContainer>
+        <Form
+          onClick={e => e.stopPropagation()}
+          kakaoBtn={kakaoBtn}
+          handleChange={handleChange}
+          handleLogin={handleLogin}
+          resetInput={resetInput}
+          submitData={submitData}
+          format={isMember ? LOGIN : SIGNUP}
+          inputValue={isLogin ? loginInput : signInput}
+        />
+        ;
+      </ModalContainer>
+    </ModalBackground>
   );
 }
 
 const ModalContainer = styled.div`
+  display: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+`;
+
+const ModalBackground = styled.div`
+  display: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.56);
-  z-index: 100000;
+  z-index: 1000;
 `;
 
 const SIGNUP = {
