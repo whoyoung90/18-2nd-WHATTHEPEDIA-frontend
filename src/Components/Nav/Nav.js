@@ -1,50 +1,139 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { BsSearch } from 'react-icons/bs';
-// import Login from './Login/Login';
-// import Logout from './Login/Logout';
+import Modal from '../Modal/Modal';
 
 export default function Nav() {
-  const Menuitems = [{ name: '영화' }, { name: 'TV 프로그램' }, { name: '책' }];
+  const MENU_ITEMS = [
+    { name: '영화' },
+    { name: 'TV 프로그램' },
+    { name: '책' },
+  ];
+
+  const [isMember, setIsMember] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+  const useScroll = () => {
+    const [moveScroll, setMoveScroll] = useState({ x: 0, y: 0 });
+    const onScroll = e => {
+      setMoveScroll({ x: window.screenX, y: window.scrollY });
+    };
+
+    useEffect(() => {
+      window.addEventListener('scroll', onScroll);
+      return () => window.removeEventListener('scroll', onScroll);
+    }, []);
+    return moveScroll;
+  };
+
+  const fetchNavUser = () => {
+    fetch('/user/login', {
+      method: 'GET',
+      headers: {
+        Authorization: localStorage.getItem('token'),
+      },
+    })
+      .then(res => res.json())
+      .then(res => {
+        if (res.message === 'INVALID_TOKEN_TYPE') {
+          setIsMember(true);
+        } else {
+          setIsMember(false);
+        }
+      });
+  };
+
+  const { y } = useScroll();
+  const isNavTop = () => {
+    if (y < 60) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  const changeModal = () => {
+    setIsMember(!isMember);
+  };
+
+  const handleModal = e => {
+    setShowModal(!showModal);
+  };
+
+  const goToLogin = () => {
+    setShowModal(true);
+    setIsMember(true);
+  };
+
+  const goToSignUp = () => {
+    setIsMember(false);
+    setShowModal(true);
+  };
 
   return (
-    <NavContainer>
-      <MenuWrapper>
-        <MenuList>
-          <NavLogo />
-          {Menuitems.map((el, index) => {
-            return (
-              <NavList key={index}>
-                <Button as="a" href="/">
-                  {el.name}
+    <>
+      {showModal && (
+        <Modal
+          fetchNavUser={fetchNavUser}
+          isMember={isMember}
+          setIsMember={setIsMember}
+          isLogin={isLogin}
+          setIsLogin={setIsLogin}
+          changeModal={changeModal}
+          showModal={showModal}
+          setShowModal={setShowModal}
+          handleModal={handleModal}
+        />
+      )}
+      <NavContainer isNavTop={isNavTop()}>
+        <MenuWrapper>
+          <MenuList>
+            <HomeButton as="a" href="/">
+              <NavLogo isNavTop={isNavTop()} />
+            </HomeButton>
+            {MENU_ITEMS.map((menu, index) => {
+              return (
+                <NavList key={index} isNavTop={isNavTop()}>
+                  <Button as="a" href="/" isNavTop={isNavTop()}>
+                    {menu.name}
+                  </Button>
+                </NavList>
+              );
+            })}
+            <SearchBar isNavTop={isNavTop()}>
+              <SearchIcon isNavTop={isNavTop()}>
+                <BsSearch />
+              </SearchIcon>
+              <Search isNavTop={isNavTop()} />
+            </SearchBar>
+            <NavList>
+              {isLogin ? (
+                <Button as="a" isNavTop={isNavTop()}>
+                  평가하기
                 </Button>
-              </NavList>
-            );
-          })}
-          <SearchBar>
-            <SearchIcon>
-              <BsSearch />
-            </SearchIcon>
-            <Search />
-          </SearchBar>
-          <NavList>
-            <Button as="a" href="/">
-              로그인
-            </Button>
-          </NavList>
-          <NavList>
-            <SignUp as="a" href="/">
-              회원가입
-            </SignUp>
-          </NavList>
-          <NavList>
-            <UserIcon as="a" href="/mypage">
-              <UserImg alt="유저프로필" src="/images/userprofile.png" />
-            </UserIcon>
-          </NavList>
-        </MenuList>
-      </MenuWrapper>
-    </NavContainer>
+              ) : (
+                <Button as="a" onClick={goToLogin} isNavTop={isNavTop()}>
+                  로그인
+                </Button>
+              )}
+            </NavList>
+            <NavList>
+              {isLogin ? (
+                <UserIcon as="a" href="/mypage">
+                  <UserImg alt="유저프로필" src="/images/userprofile.png" />
+                </UserIcon>
+              ) : (
+                <SignUp as="a" onClick={goToSignUp} isNavTop={isNavTop()}>
+                  회원가입
+                </SignUp>
+              )}
+            </NavList>
+            <NavList></NavList>
+          </MenuList>
+        </MenuWrapper>
+      </NavContainer>
+    </>
   );
 }
 
@@ -53,8 +142,9 @@ const NavContainer = styled.nav`
   top: 0;
   width: 100%;
   height: 62px;
-  background-color: white;
-  box-shadow: rgb(0 0 0 / 8%) 0px 1px 0px 0px;
+  background-color: ${props => (props.isNavTop ? '#fff' : 'transparent')};
+  box-shadow: ${props =>
+    props.isNavTop ? 'rgb(0 0 0 / 8%) 0px 1px 0px 0px' : 'none'};
   z-index: 100;
   transition: background-color 200ms ease 0s;
 `;
@@ -76,10 +166,15 @@ const MenuList = styled.div`
   margin: 0 3.5%;
 `;
 
-const NavLogo = styled.img.attrs({
+const HomeButton = styled.button`
+  width: auto;
+  height: auto;
+`;
+
+const NavLogo = styled.img.attrs(props => ({
   alt: 'logo',
-  src: '/images/logo.png',
-})`
+  src: props.isNavTop ? '/images/logo.png' : 'images/logo_white.png',
+}))`
   display: inline-block;
   width: 151px;
   height: 29px;
@@ -93,7 +188,8 @@ const NavList = styled.li`
   height: 100%;
   margin: 0 0 0 24px;
   padding: 5px;
-  color: grey;
+  color: ${props =>
+    props.isNavTop ? 'rgb(126, 126, 126)' : 'rgb(255, 255, 255)'};
   text-align: center;
   text-decoration: none;
 `;
@@ -107,8 +203,10 @@ const Button = styled.button`
   font-size: 15px;
   border: none;
   margin: 0;
-  color: rgb(126, 126, 126);
+  color: ${props =>
+    props.isNavTop ? 'rgb(126, 126, 126)' : 'rgba(255, 255, 255, 0.7)'};
   text-decoration: none;
+  cursor: pointer;
 
   &:active,
   &:hover {
@@ -124,32 +222,49 @@ const SearchBar = styled.div`
   margin: 0 0 0 auto;
 `;
 
-const Search = styled.input.attrs({
+const Search = styled.input.attrs(props => ({
   type: 'text',
   autocomplete: 'off',
   placeholder: '작품 제목, 배우, 감독을 검색해보세요.',
-})`
+  placeholderTextColor: props.isNavTop
+    ? 'rgb(126, 126, 126)'
+    : 'rgba(255, 255, 255, 0.7)',
+}))`
   display: inline-block;
   width: auto;
   min-width: 300px;
-  height: 23px;
+  height: 38px;
   margin: 12px 0;
-  padding: 7px 10px 8px 44px;
+  padding: 7px 10px 8px 30px;
   outline: none;
-  border: 1px solid transparent;
+  border: 1px solid
+    ${props => (props.isNavTop ? 'transparent' : 'rgba(255, 255, 255, 0.25)')};
   border-radius: 2px;
-  background-color: rgb(245, 245, 247);
+  background-color: ${props =>
+    props.isNavTop ? 'rgb(245, 245, 247)' : 'rgba(0, 0, 0, 0.2)'};
   font-size: 14px;
   font-weight: 400;
+  color: ${props =>
+    props.isNavTop ? 'rgb(126, 126, 126)' : 'rgba(255, 255, 255, 0.7)'};
+  &::placeholder {
+    color: ${props =>
+      props.isNavTop ? 'rgb(126, 126, 126)' : 'rgba(255, 255, 255, 0.7)'};
+  }
 `;
 
 const SearchIcon = styled.div`
   position: absolute;
   display: block;
-  top: 24px;
-  left: 20px;
-  width: 14px;
-  height: 14px;
+  top: 23px;
+  left: 12px;
+  z-index: 10;
+
+  svg {
+    width: 14px;
+    height: 14px;
+    color: ${props =>
+      props.isNavTop ? 'rgb(126, 126, 126)' : 'rgba(255, 255, 255, 0.7)'};
+  }
 `;
 
 const SignUp = styled.button`
@@ -161,12 +276,16 @@ const SignUp = styled.button`
   height: 32px;
   margin: 15px 0px;
   padding: 5px 14px 6px;
-  border: 1px solid rgba(116, 116, 123, 0.5);
+  border: 1px solid
+    ${props =>
+      props.isNavTop ? 'rgba(116, 116, 123, 0.5)' : 'rgba(255, 255, 255, 0.7)'};
   border-radius: 6px;
   font-size: 14px;
   font-weight: 500;
-  color: grey;
+  color: ${props =>
+    props.isNavTop ? 'rgb(126, 126, 126)' : 'rgba(255, 255, 255, 0.7)'};
   text-decoration: none;
+  cursor: pointer;
 
   &:active,
   &:hover {
