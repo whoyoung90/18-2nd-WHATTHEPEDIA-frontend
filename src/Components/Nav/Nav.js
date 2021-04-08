@@ -255,7 +255,7 @@ const Search = styled.input.attrs(props => ({
 const SearchIcon = styled.div`
   position: absolute;
   display: block;
-  top: 23px;
+  top: 24px;
   left: 12px;
   z-index: 10;
 
