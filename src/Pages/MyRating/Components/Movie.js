@@ -31,6 +31,7 @@ const Container = styled.div`
   cursor: pointer;
   img {
     border-radius: 5px;
+    width: 136px;
     height: 200px;
   }
 `;
@@ -49,7 +50,7 @@ const Logo = styled.div`
   img {
     position: absolute;
     bottom: 205px;
-    right: 2px;
+    right: 10px;
     width: 30px;
     height: 30px;
     border-radius: 50%;

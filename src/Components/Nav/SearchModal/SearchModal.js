@@ -11,7 +11,7 @@ export default function SearchModal({
 }) {
   const history = useHistory();
   const goToDetail = e => {
-    history.push(`/movies/${e.target.id}`);
+    history.push(`/movie/${e.target.id}`);
   };
 
   const SEARCH_MENU = userInput !== '' ? movies : POPULAR_MOVIE;

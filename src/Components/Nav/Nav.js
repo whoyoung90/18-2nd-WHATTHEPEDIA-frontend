@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { useLocation, useHistory } from 'react-router-dom';
+import { config } from '../../config';
 import { BsSearch, BsFillXCircleFill } from 'react-icons/bs';
-import { config } from '../../config.js';
 import Modal from '../Modal/Modal';
 import SearchModal from '../Nav/SearchModal/SearchModal';
 
@@ -42,7 +43,7 @@ export default function Nav() {
   };
 
   const fetchNavUser = () => {
-    fetch('/user/login', {
+    fetch(`${config.api}/user/login`, {
       method: 'GET',
       headers: {
         Authorization: localStorage.getItem('token'),
@@ -59,8 +60,16 @@ export default function Nav() {
   };
 
   const { y } = useScroll();
+  const location = useLocation();
   const isNavTop = () => {
-    if (y < 60) {
+    if (
+      y < 60 ||
+      y > 300 ||
+      location.pathname === '/myrating' ||
+      location.pathname === '/mypage' ||
+      location.pathname === 'review' ||
+      location.pathname === '/'
+    ) {
       return true;
     } else {
       return false;
@@ -105,6 +114,34 @@ export default function Nav() {
 
   const resetKeyword = e => {
     setUserInput({ keyword: '' });
+  };
+  const history = useHistory();
+  const logout = e => {
+    localStorage.clear();
+    setIsMember(false);
+    setIsLogin(false);
+    setShowModal(false);
+    history.push('/');
+    if (localStorage.getItem('access_token')) {
+      const { Kakao } = window;
+
+      if (!Kakao.Auth.getAccessToken()) {
+        console.log('Not logged in.');
+        return;
+      }
+      Kakao.Auth.logout(function () {
+        console.log(Kakao.Auth.getAccessToken());
+      });
+      Kakao.API.request({
+        url: '/v1/user/unlink',
+        success: function (response) {
+          console.log(response);
+        },
+        fail: function (error) {
+          console.log(error);
+        },
+      });
+    }
   };
 
   return (
@@ -162,9 +199,10 @@ export default function Nav() {
             </SearchBar>
 
             <NavList>
-              {isLogin ? (
-                <Button as="a" isNavTop={isNavTop()}>
-                  평가하기
+              {localStorage.getItem('token') ||
+              localStorage.getItem('access_token') ? (
+                <Button as="a" isNavTop={isNavTop()} onClick={() => logout()}>
+                  로그아웃
                 </Button>
               ) : (
                 <Button as="a" onClick={goToLogin} isNavTop={isNavTop()}>
@@ -173,7 +211,8 @@ export default function Nav() {
               )}
             </NavList>
             <NavList>
-              {isLogin ? (
+              {localStorage.getItem('token') ||
+              localStorage.getItem('access_token') ? (
                 <UserIcon as="a" href="/mypage">
                   <UserImg alt="유저프로필" src="/images/userprofile.png" />
                 </UserIcon>
@@ -238,7 +277,7 @@ const HomeButton = styled.button`
 
 const NavLogo = styled.img.attrs(props => ({
   alt: 'logo',
-  src: props.isNavTop ? '/images/logo.png' : 'images/logo_white.png',
+  src: props.isNavTop ? '/images/logo.png' : '/images/logo_white.png',
 }))`
   display: inline-block;
   width: 151px;

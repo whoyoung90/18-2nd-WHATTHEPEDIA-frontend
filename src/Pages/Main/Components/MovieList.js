@@ -66,19 +66,16 @@ const Wrap = styled.div`
   width: 1320px;
   margin: 0 auto 42px;
 `;
-
 const Container = styled.div`
   position: relative;
   width: 1320px;
   overflow: hidden;
 `;
-
 const Article = styled.div`
   display: flex;
   transition: 1s;
   transform: translateX(${props => props.carousel}px);
 `;
-
 const Button = styled.button`
   display: flex;
   justify-content: center;

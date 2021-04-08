@@ -15,7 +15,7 @@ function Graph({ movie }) {
     <>
       <Wrap>
         <GraphName>별점 그래프</GraphName>
-        <Average>평균 ★{movie.average_star}</Average>
+        <Average>평균 ★{movie.average_stars}</Average>
       </Wrap>
       <GraphWrap>
         {

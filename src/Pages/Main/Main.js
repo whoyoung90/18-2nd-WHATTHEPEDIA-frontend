@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { config } from '../../config';
 import Nav from '../../Components/Nav/Nav';
 import MovieList from './Components/MovieList';
 import PublicFooter from '../../Components/PublicFooter/PublicFooter';
@@ -13,7 +14,7 @@ class Main extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/data/MovieData2.json')
+    fetch(`${config.api}/movie`)
       .then(res => res.json())
       .then(res => {
         this.setState({

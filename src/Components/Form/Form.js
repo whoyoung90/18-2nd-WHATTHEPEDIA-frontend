@@ -13,6 +13,9 @@ export default function Form({
   inputValue,
   submitData,
   resetInput,
+  setShowModal,
+  setIsLogin,
+  setIsMember,
 }) {
   const isIdValid = /^[A-Za-z0-9][A-Za-z0-9._-]+[@]{1}[a-z]+[.]{1}[a-z]{1,4}$/;
   const isPwValid = /^(?=.*[a-zA-Z])((?=.*\d)|(?=.*\W)).{10,20}$/;
@@ -81,7 +84,12 @@ export default function Form({
         </FormSpan>
       </FormP>
       <Line />
-      <KakaoLogin kakaoBtn={kakaoBtn} />
+      <KakaoLogin
+        kakaoBtn={kakaoBtn}
+        setShowModal={setShowModal}
+        setIsLogin={setIsLogin}
+        setIsMember={setIsMember}
+      />
     </FormLayout>
   );
 }

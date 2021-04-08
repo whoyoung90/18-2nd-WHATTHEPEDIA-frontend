@@ -3,7 +3,12 @@ import { useHistory } from 'react-router-dom';
 import { config } from '../../../config';
 import Button from '../../Button/Button';
 
-export default function KakaoLogin({ kakaoBtn }) {
+export default function KakaoLogin({
+  kakaoBtn,
+  setShowModal,
+  setIsLogin,
+  setIsMember,
+}) {
   const history = useHistory();
   const kakaoLoginBtnHandler = () => {
     const { Kakao } = window;
@@ -22,8 +27,10 @@ export default function KakaoLogin({ kakaoBtn }) {
             localStorage.setItem('access_token', res.access_token);
             if (res.access_token) {
               alert('로그인 성공!!');
+              setShowModal(false);
+              setIsLogin(true);
+              setIsMember(true);
               history.push('/');
-              console.log('토큰:', res.access_token);
             }
           });
         Kakao.API.request({

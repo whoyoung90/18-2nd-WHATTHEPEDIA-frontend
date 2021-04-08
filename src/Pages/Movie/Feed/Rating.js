@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { FaStar } from 'react-icons/fa';
 import styled from 'styled-components';
+import { FaStar } from 'react-icons/fa';
+import { config } from '../../../config';
 
 const ARRAY = [0, 1, 2, 3, 4];
 
-function Rating() {
+function Rating(props) {
   const [clicked, setClicked] = useState([false, false, false, false, false]);
 
   const handleStarClick = index => {
@@ -21,14 +22,15 @@ function Rating() {
 
   const sendReview = () => {
     let score = clicked.filter(Boolean).length;
-    fetch('http://localhost:3000/mypage', {
+    fetch(`${config.api}/movie/`, {
       method: 'POST',
       Headers: {
-        // Authroization: '',
+        Authroization:
+          'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMH0.8ea-EYWNQ4Orfazh5Y7SNxhKcnfhhIt4QySLGfg3xt4',
       },
       body: JSON.stringify({
-        // movie_id:1
-        // star: score,
+        movie_id: 1,
+        star: score,
       }),
     });
   };
