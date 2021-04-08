@@ -9,7 +9,8 @@ class TotalAssess extends React.Component {
         지금까지&nbsp;
         <Assessment>
           <FaStar />
-          &nbsp;total assess 개의 평가가&nbsp;
+          &nbsp;
+          {this.props.rating_amount} 개의 평가가&nbsp;
         </Assessment>
         쌓였어요.
       </Container>
@@ -32,6 +33,5 @@ const Container = styled.div`
 
 const Assessment = styled.span`
   display: flex;
-  align-items: center;
   color: #ff0558;
 `;

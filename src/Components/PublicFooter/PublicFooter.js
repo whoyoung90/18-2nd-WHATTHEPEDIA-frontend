@@ -7,7 +7,7 @@ class PublicFooter extends React.Component {
   render() {
     return (
       <Footer>
-        <TotalAssess />
+        <TotalAssess rating_amount={this.props.rating_amount} />
         <Address />
       </Footer>
     );
@@ -15,14 +15,11 @@ class PublicFooter extends React.Component {
 }
 
 const Footer = styled.div`
-  position: absolute;
-  bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: 275px;
-  border: 1px solid black;
   background-color: #1c1d1f;
 `;
 export default PublicFooter;

@@ -1,25 +1,54 @@
 import React from 'react';
 import styled from 'styled-components';
 import Nav from '../../Components/Nav/Nav';
+import MovieList from './Components/MovieList';
 import PublicFooter from '../../Components/PublicFooter/PublicFooter';
 
-function Main() {
-  return (
-    <>
-      <MainContainer>
+class Main extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      movieData: {},
+    };
+  }
+
+  componentDidMount() {
+    fetch('/data/MovieData2.json')
+      .then(res => res.json())
+      .then(res => {
+        this.setState({
+          movieData: res.results,
+        });
+      });
+  }
+
+  render() {
+    const { movieData } = this.state;
+
+    return (
+      <div>
         <Nav />
-        <PublicFooter />
-      </MainContainer>
-    </>
-  );
+        <Head top>박스오피스 순위</Head>
+        <MovieList movieData={movieData.box_office} />
+        <Head>왓더 영화 순위</Head>
+        <MovieList movieData={movieData.watcha_movie} />
+        <PublicFooter rating_amount={movieData.rating_amount} />
+      </div>
+    );
+  }
 }
 
-// 네비게이션 테스트용 (conflict 발생 시 기존 코드 사용)
-const MainContainer = styled.div`
-  position: relative;
-  width: 100%;
-  height: 2000px;
-  background: orange;
-`;
-
 export default Main;
+
+const Head = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 12px 0 14px;
+  margin: auto;
+  width: 1320px;
+  height: 30px;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-top: ${props => props.top && '100px'};
+`;

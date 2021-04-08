@@ -22,13 +22,12 @@ const Movie = ({ id, image, title, average_stars, logo, history }) => {
 export default withRouter(Movie);
 
 const Wrap = styled.div`
-  padding: 26px 16px 0;
-  width: 137px;
+  width: 140px;
+  margin-bottom: 24px;
 `;
 
 const Container = styled.div`
   position: relative;
-  margin-bottom: 24px;
   cursor: pointer;
   img {
     border-radius: 5px;
@@ -37,12 +36,11 @@ const Container = styled.div`
 `;
 
 const Title = styled.p`
-  margin-top: 5px;
+  margin: 5px 0;
   font-size: 16px;
 `;
 
 const Rate = styled.p`
-  margin-top: 2px;
   font-size: 13px;
   color: #ffa136;
 `;
@@ -50,8 +48,8 @@ const Rate = styled.p`
 const Logo = styled.div`
   img {
     position: absolute;
-    top: 6px;
-    right: 6px;
+    bottom: 205px;
+    right: 2px;
     width: 30px;
     height: 30px;
     border-radius: 50%;

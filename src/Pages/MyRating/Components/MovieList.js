@@ -3,19 +3,26 @@ import Movie from './Movie';
 import styled from 'styled-components';
 
 const MovieList = ({ movie, word }) => {
+  const matchSortValue = {
+    '담은 순': 'rate_order',
+    '평점 순': 'average_stars',
+    '가나다 순': 'title',
+    '개봉일 순': 'release_date',
+  };
+
   const changeWord = () => {
-    if (word === '담은 순' || '평점 순') {
+    if (word === '담은 순' || word === '평점 순') {
       return (a, b) => {
-        const sortA = word === '담은 순' ? a.rate_order : a.average_stars;
-        const sortB = word === '담은 순' ? b.rate_order : b.average_stars;
+        const sortA = a[matchSortValue[word]];
+        const sortB = b[matchSortValue[word]];
         return sortB - sortA;
       };
     }
 
-    if (word === '가나다 순' || '개봉일 순') {
+    if (word === '가나다 순' || word === '개봉일 순') {
       return (a, b) => {
-        const sortA = word === '가나다 순' ? a.title : a.release_date;
-        const sortB = word === '가나다 순' ? b.title : b.release_date;
+        const sortA = a[matchSortValue[word]];
+        const sortB = b[matchSortValue[word]];
         if (sortA < sortB) {
           return -1;
         }
@@ -28,6 +35,7 @@ const MovieList = ({ movie, word }) => {
   };
 
   const sortBy = movie.my_movies?.sort(changeWord());
+
   return (
     <Wrap>
       {sortBy?.map((data, idx) => (
@@ -48,7 +56,7 @@ const MovieList = ({ movie, word }) => {
 export default MovieList;
 
 const Wrap = styled.div`
-  padding-top: 234px;
+  padding: 254px 16px 0;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
 `;
