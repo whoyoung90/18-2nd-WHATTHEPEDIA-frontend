@@ -35,7 +35,7 @@ export default function Modal({
 
   const handleChange = e => {
     const { name, value } = e.target;
-    isLogin
+    isMember
       ? setLoginInput({ ...loginInput, [name]: value })
       : setSignInput({ ...signInput, [name]: value });
   };
@@ -87,16 +87,12 @@ export default function Modal({
                 alert('로그인 완료');
                 setShowModal(false);
                 setIsLogin(true);
-                setIsMember(true);
-                history.push('/');
               } else {
                 alert('로그인 실패');
               }
             });
 
       isLogin ? resetInput('login') : resetInput('signUp');
-      isMember && changeModal();
-      history.goBack('/');
     } else {
       alert('🔒이메일과 비밀번호를 다시 확인해보세요🔒');
     }
@@ -112,7 +108,7 @@ export default function Modal({
         resetInput={resetInput}
         submitData={submitData}
         format={isMember ? LOGIN : SIGNUP}
-        inputValue={isLogin ? loginInput : signInput}
+        inputValue={isMember ? loginInput : signInput}
       />
       ;
     </ModalContainer>
