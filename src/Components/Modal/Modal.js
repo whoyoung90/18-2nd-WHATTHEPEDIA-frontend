@@ -87,6 +87,7 @@ export default function Modal({
                 alert('로그인 완료');
                 setShowModal(false);
                 setIsLogin(true);
+                console.log('토큰토큰', res.access_token);
               } else {
                 alert('로그인 실패');
               }
