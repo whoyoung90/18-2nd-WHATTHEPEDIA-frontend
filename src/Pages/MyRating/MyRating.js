@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { config } from '../../config';
 import Nav from '../../Components/Nav/Nav';
 import MyNav from './Components/MyNav';
 import Modal from './Components/Modal';
@@ -10,24 +11,27 @@ const MyRating = () => {
   const [showModal, setShowModal] = useState(false);
   const [word, setWord] = useState('담은 순');
   const [movie, setMovie] = useState({});
-
   useEffect(() => {
     getMovies();
   }, []);
-
   const getMovies = () => {
-    fetch('/data/MyMovie.json')
+    fetch(`${config.api}/user/rating`, {
+      // fetch('/data/MyMovie.json', {
+      method: 'GET',
+      headers: {
+        Authorization:
+          'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMH0.8ea-EYWNQ4Orfazh5Y7SNxhKcnfhhIt4QySLGfg3xt4',
+      },
+    })
       .then(res => res.json())
       .then(res => {
-        setMovie(res.results);
+        setMovie(res);
       });
   };
-
   const handleModal = e => {
     setWord(e.target.name);
     setShowModal(open => !open);
   };
-
   return (
     <Wrap>
       <Modal
@@ -50,7 +54,6 @@ const MyRating = () => {
     </Wrap>
   );
 };
-
 export default MyRating;
 
 const LIST = [

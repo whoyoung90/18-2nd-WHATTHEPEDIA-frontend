@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Form from '../Form/Form';
-import { config } from '../../config.js';
+import { config } from '../../config';
 import { useHistory } from 'react-router';
 
 const INITIAL_INPUT = {
@@ -45,12 +45,12 @@ export default function Modal({
       ? setLoginInput({ email: '', password: '' })
       : setSignInput({ name: '', email: '', password: '' });
   };
+
   const history = useHistory();
   const submitData = () => {
     const isIdValid = /^[A-Za-z0-9][A-Za-z0-9._-]+[@]{1}[a-z]+[.]{1}[a-z]{1,4}$/;
     const isPwValid = /^(?=.*[a-zA-Z])((?=.*\d)|(?=.*\W)).{10,20}$/;
-    console.log('✅login', loginInput);
-    console.log('✅login', signInput);
+
     if (
       isIdValid.test(loginInput.email || signInput.email) &&
       isPwValid.test(loginInput.password || signInput.password)
@@ -67,8 +67,8 @@ export default function Modal({
             .then(res => res.json())
             .then(res => {
               if (res.message === 'SUCCESS') {
+                changeModal();
                 alert('회원가입이 완료되었습니다.');
-                setIsLogin(true);
                 setShowModal(true);
               } else {
                 alert('회원가입 실패');
@@ -96,8 +96,6 @@ export default function Modal({
             });
 
       isLogin ? resetInput('login') : resetInput('signUp');
-      isMember && changeModal();
-      history.goBack('/');
     } else {
       alert('🔒이메일과 비밀번호를 다시 확인해보세요🔒');
     }
@@ -113,10 +111,12 @@ export default function Modal({
           handleLogin={handleLogin}
           resetInput={resetInput}
           submitData={submitData}
+          setShowModal={setShowModal}
+          setIsLogin={setIsLogin}
+          setIsMember={setIsMember}
           format={isMember ? LOGIN : SIGNUP}
-          inputValue={isLogin ? loginInput : signInput}
+          inputValue={isMember ? loginInput : signInput}
         />
-        ;
       </ModalContainer>
     </ModalBackground>
   );

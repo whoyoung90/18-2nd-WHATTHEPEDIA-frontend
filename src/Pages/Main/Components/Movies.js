@@ -41,7 +41,6 @@ export default withRouter(Movies);
 const Wrap = styled.div`
   display: flex;
 `;
-
 const Movie = styled.div`
   position: relative;
   margin: 0 6px;
@@ -50,22 +49,20 @@ const Movie = styled.div`
   &:first-child {
     margin-left: 10px;
   }
-
   img {
     margin-bottom: 10px;
     width: 250px;
+    height: 353px;
     border-radius: 5px;
   }
 `;
-
 const MovieInfo = styled.li`
   margin-top: ${props => props.movieRate || (props.movieSubInfo && '10px')};
   margin-bottom: ${props => (props.movieSubInfo ? '10px' : '3px')};
   font-size: ${props => (props.movieTitle ? '18px' : '14px')};
   font-weight: ${props => (props.movieTitle ? 'bold' : 'normal')};
-  color: ${props => (props.movieRate ? '#ff0558' : 'black')};
+  color: ${props => (props.movieRate ? '#FF0558' : 'black')};
 `;
-
 const RankBox = styled.div`
   display: flex;
   justify-content: center;
@@ -80,13 +77,12 @@ const RankBox = styled.div`
   color: white;
   font-weight: bold;
 `;
-
 const Logo = styled.div`
   position: absolute;
   top: 5px;
   right: 5px;
-
   img {
     width: 30px;
+    height: 30px;
   }
 `;

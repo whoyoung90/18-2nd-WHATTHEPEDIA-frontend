@@ -57,7 +57,8 @@ export default function Mypage() {
                   노는게 제일 좋아 친구들 모여라 언제나 즐거워 개구쟁이 뽀로로
                   눈덮인 숲속마을 꼬마 펭귄 나가신다 언제나 즐거워 오늘은 또
                   무슨일이 생길까 뽀로로를 불러 봐요 뽀롱뽀로 뽀롱뽀로
-                  뽀롱뽀롱뽀로로 / 데이터 없을 경우 / 프로필이 없습니다.
+                  뽀롱뽀롱뽀로로 🐧✅✅ 뽀로로 데이터 없을 경우// 프로필이
+                  없습니다 추가
                 </MyBodyTitleSpan>
               </MyBodyTitle>
             </MyBodyHeader>
@@ -223,7 +224,7 @@ const MyFavor = styled.div`
   width: 598px;
   height: 22px;
   margin: 0 20px;
-  padding: 13px 0 13px;
+  padding: 17px 0;
   border-top: 1px solid rgb(237, 237, 237);
   cursor: pointer;
 
