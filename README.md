@@ -17,10 +17,8 @@
   🎞 Front-end : 강준우, 김우영, 남궁선아
   
   🎞 Back-end : 예병수, 최인아
-<br>
 
-- 프로젝트 동영상 링크 : [프로젝트 동영상 링크](https://www.youtube.com/watch?v=65SivG9_epo&t=2s)
-- 프로젝트 Trello 링크 : [프로젝트 Trello 링크](https://trello.com/b/kdyfZrY1/what-the-pedia)
+- **프로젝트 동영상 링크 :** [프로젝트 동영상 링크](https://www.youtube.com/watch?v=65SivG9_epo&t=2s)
 
 <br>
 
