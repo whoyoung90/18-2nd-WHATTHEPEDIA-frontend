@@ -20,7 +20,6 @@
 
 > ## ✨ 기술 스택
 
-- JavaScript(ES6+)
 - React
 - React Hooks
 - Styled Components
