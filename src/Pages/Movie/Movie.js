@@ -1,21 +1,25 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { config } from '../../config';
 import Nav from '../../Components/Nav/Nav';
 import PublicFooter from '../../Components/PublicFooter/PublicFooter';
 import Feed from './Feed';
 import Information from './Information';
 import Gallery from './Gallery';
 import styled from 'styled-components';
+
 function Movie(props) {
   const [movie, setMovie] = useState({});
   const getMovie = () => {
-    fetch(`http://52.78.63.175:8000/movie/${props.match.params.id}`)
-      // fetch('/data/movieDetail.json')
-      .then(res => res.json())
-      .then(res => setMovie(res.results));
+    axios
+      .get(`${config.api}/movie/${props.match.params.id}`)
+      .then(res => setMovie(console.log(res)));
   };
+
   useEffect(() => {
     getMovie();
-  }, []); //컨디마
+  }, []);
+
   useEffect(() => {
     getMovie();
     window.scrollTo(0, 0);

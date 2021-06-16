@@ -1,5 +1,5 @@
 export const config = {
-  api: 'http://52.78.63.175:8000',
+  api: 'http://localhost:3000/data/MovieData.json',
   LOCAL_TEXT: 'http://localhost:3000',
   REACT_APP_KAKAO_API_KEY: 'e7f59ef4b4900fe5aa839fcbe7c5ceb7',
 };

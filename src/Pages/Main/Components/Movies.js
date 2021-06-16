@@ -1,39 +1,36 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { BsDot } from 'react-icons/bs';
 
-class Movies extends React.Component {
-  goToMovie = id => {
-    this.props.history.push(`/movie/${id}`);
+function Movies({ movieData }) {
+  const history = useHistory();
+
+  const goToMovie = id => {
+    history.push(`/movie/${id}`);
   };
 
-  render() {
-    const { movieData } = this.props;
-
-    return (
-      <Wrap>
-        {movieData?.map((data, idx) => (
-          <Movie key={idx} onClick={() => this.goToMovie(data.id)}>
-            <img alt="moviePicture" src={data.image} />
-            <ol>
-              <MovieInfo movieTitle>{data.title}</MovieInfo>
-              <MovieInfo movieSubInfo>
-                {data.release_date} <BsDot /> {data.nationality}
-              </MovieInfo>
-              <MovieInfo movieRate>평균 ★ {data.average_stars}</MovieInfo>
-            </ol>
-            <RankBox>{idx + 1}</RankBox>
-            <Logo>
-              {data.logo && (
-                <img alt="whatThe" src="/images/watthe_label.png" />
-              )}
-            </Logo>
-          </Movie>
-        ))}
-      </Wrap>
-    );
-  }
+  return (
+    <Wrap>
+      {movieData?.map((data, idx) => (
+        <SubWrap key={idx} onClick={() => goToMovie(data.id)}>
+          <img alt="moviePicture" src={data.image} />
+          <ol>
+            <MovieInfo movieTitle>{data.title}</MovieInfo>
+            <MovieInfo movieSubInfo>
+              {data.release_date} <BsDot /> {data.nationality}
+            </MovieInfo>
+            <MovieInfo movieRate>평균 ★ {data.average_stars}</MovieInfo>
+          </ol>
+          <RankBox>{idx + 1}</RankBox>
+          <Logo>
+            {data.logo && <img alt="whatThe" src="/images/watthe_label.png" />}
+          </Logo>
+        </SubWrap>
+      ))}
+    </Wrap>
+  );
 }
 
 export default withRouter(Movies);
@@ -41,7 +38,7 @@ export default withRouter(Movies);
 const Wrap = styled.div`
   display: flex;
 `;
-const Movie = styled.div`
+const SubWrap = styled.div`
   position: relative;
   margin: 0 6px;
   width: 250px;
