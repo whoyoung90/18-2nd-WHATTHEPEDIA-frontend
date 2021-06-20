@@ -9,11 +9,24 @@ import Gallery from './Gallery';
 import styled from 'styled-components';
 
 function Movie(props) {
-  const [movie, setMovie] = useState({});
+  console.log('동적라우팅 props', props.match.params.id);
+  const [movie, setMovie] = useState('');
+  // const getMovie = () => {
+  //   axios
+  //     .get(`${config.api}/movie/${props.match.params.id}`)
+  //     .then(res => setMovie(res.data.results));
+  // };
+
   const getMovie = () => {
     axios
-      .get(`${config.api}/movie/${props.match.params.id}`)
-      .then(res => setMovie(console.log(res)));
+      .get(`${config.api}`)
+      .then(res =>
+        setMovie(
+          res.data.results.box_office.filter(
+            item => item.id === Number(props.match.params.id)
+          )[0]
+        )
+      );
   };
 
   useEffect(() => {
@@ -23,13 +36,16 @@ function Movie(props) {
   useEffect(() => {
     getMovie();
     window.scrollTo(0, 0);
-  }, [props.match.params.id]); //컨디업
+  }, [props.match.params.id]);
+
   // useEffect(() => {
   //   getReview();
   // }); //Rating.js 별점 받아오는 컨디업
   // const getReview = () => {
   //   fetch('http://localhost:3000/mypage', {});
   // }; //Rating.js 별점
+  console.log(movie);
+
   return (
     <>
       <Nav />

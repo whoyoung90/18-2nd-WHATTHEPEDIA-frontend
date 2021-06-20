@@ -1,6 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
-import { withRouter } from 'react-router-dom';
+import { useHistory, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { BsDot } from 'react-icons/bs';
 
@@ -13,22 +12,25 @@ function Movies({ movieData }) {
 
   return (
     <Wrap>
-      {movieData?.map((data, idx) => (
-        <SubWrap key={idx} onClick={() => goToMovie(data.id)}>
-          <img alt="moviePicture" src={data.image} />
-          <ol>
-            <MovieInfo movieTitle>{data.title}</MovieInfo>
-            <MovieInfo movieSubInfo>
-              {data.release_date} <BsDot /> {data.nationality}
-            </MovieInfo>
-            <MovieInfo movieRate>평균 ★ {data.average_stars}</MovieInfo>
-          </ol>
-          <RankBox>{idx + 1}</RankBox>
-          <Logo>
-            {data.logo && <img alt="whatThe" src="/images/watthe_label.png" />}
-          </Logo>
-        </SubWrap>
-      ))}
+      {movieData &&
+        movieData.map((data, idx) => (
+          <SubWrap key={idx} onClick={() => goToMovie(data.id)}>
+            <img alt="moviePicture" src={data.image} />
+            <ol>
+              <MovieInfo movieTitle>{data.title}</MovieInfo>
+              <MovieInfo movieSubInfo>
+                {data.release_date} <BsDot /> {data.nationality}
+              </MovieInfo>
+              <MovieInfo movieRate>평균 ★ {data.average_stars}</MovieInfo>
+            </ol>
+            <RankBox>{idx + 1}</RankBox>
+            <Logo>
+              {data.logo && (
+                <img alt="whatThe" src="/images/watthe_label.png" />
+              )}
+            </Logo>
+          </SubWrap>
+        ))}
     </Wrap>
   );
 }
