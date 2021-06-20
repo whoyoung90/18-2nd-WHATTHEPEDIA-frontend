@@ -1,62 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Movies from './Movies';
 import styled from 'styled-components';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 const CAROUSEL_WIDTH = 1310;
 
-class MovieList extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      carousel: 0,
-      handleLeft: false,
-      handleRight: true,
-    };
-  }
+function MovieList({ movieData }) {
+  const [carousel, setCarousel] = useState(0);
+  const [handleLeft, setHandleLeft] = useState(false);
+  const [handleRight, setHandleRight] = useState(true);
 
-  handleButton = buttonValue => {
-    const { carousel } = this.state;
-    const { movieData } = this.props;
-    const totalMovieNumber = movieData.length - 1;
-    this.setState({
-      carousel: carousel + buttonValue,
-      handleLeft: carousel + buttonValue === 0 ? false : true,
-      handleRight:
-        carousel + buttonValue ===
-        buttonValue * Math.floor(totalMovieNumber / 5)
-          ? false
-          : true,
-    });
+  const handleButton = WIDTH => {
+    setCarousel(carousel + WIDTH);
+    setHandleLeft(carousel + WIDTH === 0 ? false : true);
+    setHandleRight(
+      carousel + WIDTH === WIDTH * Math.floor(movieData.length - 1 / 5)
+        ? false
+        : true
+    );
   };
 
-  render() {
-    const { carousel, handleLeft, handleRight } = this.state;
-
-    return (
-      <Wrap>
-        <Container>
-          <Article
-            carousel={carousel}
-            handleLeft={handleLeft}
-            handleRight={handleRight}
-          >
-            <Movies movieData={this.props.movieData} />
-          </Article>
-        </Container>
-        {handleLeft && (
-          <Button left onClick={() => this.handleButton(CAROUSEL_WIDTH)}>
-            <FiChevronLeft />
-          </Button>
-        )}
-        {handleRight && (
-          <Button right onClick={() => this.handleButton(-CAROUSEL_WIDTH)}>
-            <FiChevronRight />
-          </Button>
-        )}
-      </Wrap>
-    );
-  }
+  return (
+    <Wrap>
+      <Container>
+        <Article
+          carousel={carousel}
+          handleLeft={handleLeft}
+          handleRight={handleRight}
+        >
+          <Movies movieData={movieData} />
+        </Article>
+      </Container>
+      {handleLeft && (
+        <Button left onClick={() => handleButton(CAROUSEL_WIDTH)}>
+          <FiChevronLeft />
+        </Button>
+      )}
+      {handleRight && (
+        <Button right onClick={() => handleButton(-CAROUSEL_WIDTH)}>
+          <FiChevronRight />
+        </Button>
+      )}
+    </Wrap>
+  );
 }
 
 export default MovieList;

@@ -1,20 +1,20 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { useHistory, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { BsDot } from 'react-icons/bs';
 
-class Movies extends React.Component {
-  goToMovie = id => {
-    this.props.history.push(`/movie/${id}`);
+function Movies({ movieData }) {
+  const history = useHistory();
+
+  const goToMovie = id => {
+    history.push(`/movie/${id}`);
   };
 
-  render() {
-    const { movieData } = this.props;
-
-    return (
-      <Wrap>
-        {movieData?.map((data, idx) => (
-          <Movie key={idx} onClick={() => this.goToMovie(data.id)}>
+  return (
+    <Wrap>
+      {movieData &&
+        movieData.map((data, idx) => (
+          <SubWrap key={idx} onClick={() => goToMovie(data.id)}>
             <img alt="moviePicture" src={data.image} />
             <ol>
               <MovieInfo movieTitle>{data.title}</MovieInfo>
@@ -29,11 +29,10 @@ class Movies extends React.Component {
                 <img alt="whatThe" src="/images/watthe_label.png" />
               )}
             </Logo>
-          </Movie>
+          </SubWrap>
         ))}
-      </Wrap>
-    );
-  }
+    </Wrap>
+  );
 }
 
 export default withRouter(Movies);
@@ -41,7 +40,7 @@ export default withRouter(Movies);
 const Wrap = styled.div`
   display: flex;
 `;
-const Movie = styled.div`
+const SubWrap = styled.div`
   position: relative;
   margin: 0 6px;
   width: 250px;

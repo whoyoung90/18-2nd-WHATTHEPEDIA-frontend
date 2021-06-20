@@ -1,122 +1,381 @@
-[
-  {
-    "id": 1,
-    "img_url": "https://an2-img.amz.wtchn.net/image/v2/a2c4ecb107a0e7678ac29fca25994d0b.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFek56RTNPVEl6TlRneE56RTBOVGd3SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LkJsd2x4SC1hdnhxRjJUVlVXT1l0MXhNbGU0dW5pODJ1bU5tZWFSdkpMV3M",
-    "title": "자산어보",
-    "year": 2021,
-    "nation": "한국",
-    "average_rating": 4.0
-  },
-  {
-    "id": 2,
-    "img_url": "https://an2-img.amz.wtchn.net/image/v2/a2c4ecb107a0e7678ac29fca25994d0b.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFek56RTNPVEl6TlRneE56RTBOVGd3SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LkJsd2x4SC1hdnhxRjJUVlVXT1l0MXhNbGU0dW5pODJ1bU5tZWFSdkpMV3M",
-    "title": "자산어보",
-    "year": 2021,
-    "nation": "한국",
-    "average_rating": 4.0
-  },
-  {
-    "id": 3,
-    "img_url": "https://an2-img.amz.wtchn.net/image/v2/a2c4ecb107a0e7678ac29fca25994d0b.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFek56RTNPVEl6TlRneE56RTBOVGd3SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LkJsd2x4SC1hdnhxRjJUVlVXT1l0MXhNbGU0dW5pODJ1bU5tZWFSdkpMV3M",
-    "title": "자산어보",
-    "year": 2021,
-    "nation": "한국",
-    "average_rating": 4.0
-  },
-  {
-    "id": 4,
-    "img_url": "https://an2-img.amz.wtchn.net/image/v2/a2c4ecb107a0e7678ac29fca25994d0b.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFek56RTNPVEl6TlRneE56RTBOVGd3SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LkJsd2x4SC1hdnhxRjJUVlVXT1l0MXhNbGU0dW5pODJ1bU5tZWFSdkpMV3M",
-    "title": "자산어보",
-    "year": 2021,
-    "nation": "한국",
-    "average_rating": 4.0
-  },
-  {
-    "id": 5,
-    "img_url": "https://an2-img.amz.wtchn.net/image/v2/a2c4ecb107a0e7678ac29fca25994d0b.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFek56RTNPVEl6TlRneE56RTBOVGd3SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LkJsd2x4SC1hdnhxRjJUVlVXT1l0MXhNbGU0dW5pODJ1bU5tZWFSdkpMV3M",
-    "title": "자산어보",
-    "year": 2021,
-    "nation": "한국",
-    "average_rating": 4.0
-  },
-  {
-    "id": 6,
-    "img_url": "https://an2-img.amz.wtchn.net/image/v2/a2c4ecb107a0e7678ac29fca25994d0b.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFek56RTNPVEl6TlRneE56RTBOVGd3SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LkJsd2x4SC1hdnhxRjJUVlVXT1l0MXhNbGU0dW5pODJ1bU5tZWFSdkpMV3M",
-    "title": "자산어보",
-    "year": 2021,
-    "nation": "한국",
-    "average_rating": 4.0
-  },
-  {
-    "id": 7,
-    "img_url": "https://an2-img.amz.wtchn.net/image/v2/a2c4ecb107a0e7678ac29fca25994d0b.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFek56RTNPVEl6TlRneE56RTBOVGd3SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LkJsd2x4SC1hdnhxRjJUVlVXT1l0MXhNbGU0dW5pODJ1bU5tZWFSdkpMV3M",
-    "title": "자산어보",
-    "year": 2021,
-    "nation": "한국",
-    "average_rating": 4.0
-  },
-  {
-    "id": 8,
-    "img_url": "https://an2-img.amz.wtchn.net/image/v2/a2c4ecb107a0e7678ac29fca25994d0b.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFek56RTNPVEl6TlRneE56RTBOVGd3SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LkJsd2x4SC1hdnhxRjJUVlVXT1l0MXhNbGU0dW5pODJ1bU5tZWFSdkpMV3M",
-    "title": "자산어보",
-    "year": 2021,
-    "nation": "한국",
-    "average_rating": 4.0
-  },
-  {
-    "id": 9,
-    "img_url": "https://an2-img.amz.wtchn.net/image/v2/a2c4ecb107a0e7678ac29fca25994d0b.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFek56RTNPVEl6TlRneE56RTBOVGd3SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LkJsd2x4SC1hdnhxRjJUVlVXT1l0MXhNbGU0dW5pODJ1bU5tZWFSdkpMV3M",
-    "title": "자산어보",
-    "year": 2021,
-    "nation": "한국",
-    "average_rating": 4.0
-  },
-  {
-    "id": 10,
-    "img_url": "https://an2-img.amz.wtchn.net/image/v2/a2c4ecb107a0e7678ac29fca25994d0b.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFek56RTNPVEl6TlRneE56RTBOVGd3SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LkJsd2x4SC1hdnhxRjJUVlVXT1l0MXhNbGU0dW5pODJ1bU5tZWFSdkpMV3M",
-    "title": "자산어보",
-    "year": 2021,
-    "nation": "한국",
-    "average_rating": 4.0
-  },
-  {
-    "id": 11,
-    "img_url": "https://an2-img.amz.wtchn.net/image/v2/a2c4ecb107a0e7678ac29fca25994d0b.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFek56RTNPVEl6TlRneE56RTBOVGd3SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LkJsd2x4SC1hdnhxRjJUVlVXT1l0MXhNbGU0dW5pODJ1bU5tZWFSdkpMV3M",
-    "title": "자산어보",
-    "year": 2021,
-    "nation": "한국",
-    "average_rating": 4.0
-  },
-  {
-    "id": 12,
-    "img_url": "https://an2-img.amz.wtchn.net/image/v2/a2c4ecb107a0e7678ac29fca25994d0b.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFek56RTNPVEl6TlRneE56RTBOVGd3SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LkJsd2x4SC1hdnhxRjJUVlVXT1l0MXhNbGU0dW5pODJ1bU5tZWFSdkpMV3M",
-    "title": "자산어보",
-    "year": 2021,
-    "nation": "한국",
-    "average_rating": 4.0
-  },
-  {
-    "id": 13,
-    "img_url": "https://an2-img.amz.wtchn.net/image/v2/a2c4ecb107a0e7678ac29fca25994d0b.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFek56RTNPVEl6TlRneE56RTBOVGd3SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LkJsd2x4SC1hdnhxRjJUVlVXT1l0MXhNbGU0dW5pODJ1bU5tZWFSdkpMV3M",
-    "title": "자산어보",
-    "year": 2021,
-    "nation": "한국",
-    "average_rating": 4.0
-  },
-  {
-    "id": 14,
-    "img_url": "https://an2-img.amz.wtchn.net/image/v2/a2c4ecb107a0e7678ac29fca25994d0b.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFek56RTNPVEl6TlRneE56RTBOVGd3SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LkJsd2x4SC1hdnhxRjJUVlVXT1l0MXhNbGU0dW5pODJ1bU5tZWFSdkpMV3M",
-    "title": "자산어보",
-    "year": 2021,
-    "nation": "한국",
-    "average_rating": 4.0
-  },
-  {
-    "id": 15,
-    "img_url": "https://an2-img.amz.wtchn.net/image/v2/a2c4ecb107a0e7678ac29fca25994d0b.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFek56RTNPVEl6TlRneE56RTBOVGd3SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LkJsd2x4SC1hdnhxRjJUVlVXT1l0MXhNbGU0dW5pODJ1bU5tZWFSdkpMV3M",
-    "title": "자산어보",
-    "year": 2021,
-    "nation": "한국",
-    "average_rating": 4.0
+{
+  "results": {
+    "box_office": [
+      {
+        "id": 1,
+        "title": "콩 vs 고질라",
+        "image": "https://an2-img.amz.wtchn.net/image/v2/24b8b07683cb530f082ad075bb4a8eff.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFMU56Y3lNVE0zTURjME5UVXlOakkxSWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LjY1MG1EeEM0akYtTDJXS0pXVE8yVGoyOFZNX3hicFBKM2plbnU3dG5kMkU",
+        "logo": false,
+        "nationality": "미국",
+        "release_date": "2019-01-01",
+        "average_stars": 4.0,
+        "number_of_audience": 30000,
+        "movie_rating": 120000.0,
+        "main_image": "https://an2-img.amz.wtchn.net/image/v2/24b8b07683cb530f082ad075bb4a8eff.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFMU56Y3lNVE0zTURjME5UVXlOakkxSWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LjY1MG1EeEM0akYtTDJXS0pXVE8yVGoyOFZNX3hicFBKM2plbnU3dG5kMkU",
+        "korean_title": "콩 vs 고질라",
+        "release_data": "2019-01-01",
+        "genre": "SF",
+        "num_of_stars": "2,587",
+        "running_time": "113",
+        "description": "콩과 콩의 보호자들은 그가 정착할 수 있는 곳을 찾아 콩과 특별하고 강력한 유대감을 형성하고 있는 고아 소녀 지아와 함께 위험한 여정을 떠나게 된다. 그러던 중 지구 파괴를 위한 회심의 날을 휘두르는 분노에 찬 고질라와 마주하게 되고, 보이지 않는 힘에 의해 마침내 맞붙게 된 두 전설의 장대한 대결은 지구 깊은 곳에 도사린 수수께끼의 시작에 불가할 뿐이었는데…",
+        "panels": [
+          {
+            "profile": "/images/actor.jpg",
+            "actor": "김우영",
+            "role": "감독",
+            "character": "요다"
+          },
+          {
+            "profile": "/images/actor.jpg",
+            "actor": "김우영",
+            "role": "감독",
+            "character": "요다"
+          },
+          {
+            "profile": "/images/actor.jpg",
+            "actor": "김우영",
+            "role": "감독",
+            "character": "요다"
+          }
+        ],
+        "galleries": [
+          "/images/movieDetail.jpg",
+          "https://an2-img.amz.wtchn.net/image/v2/24b8b07683cb530f082ad075bb4a8eff.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFMU56Y3lNVE0zTURjME5UVXlOakkxSWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LjY1MG1EeEM0akYtTDJXS0pXVE8yVGoyOFZNX3hicFBKM2plbnU3dG5kMkU",
+          "/images/MovieName.jpg",
+          "/images/actor.jpg",
+          "/images/movieDetail.jpg",
+          "/images/MovieName.jpg"
+        ],
+        "star_graph": { "5": 1, "4": 2, "3": 0, "2": 8, "1": 4 },
+        "comments": [
+          {
+            "user": "그라시아스",
+            "user_star": "3.0",
+            "like": "123",
+            "content": "운 좋게 아이맥스에서 보게 되었는데 마치 두마리 괴수가 정말 내 앞에서 싸우는 거 같은 체험을 하게 만든다 cg와 액션은 물론이고 진짜 음향소리가.... 영화는 극장에서 봐야한다지만 특히나 이 영화는 반드시 극장에서 그것도 아이맥스같은 상영관에서 봐야 그 진가를 제대로 발휘한다고 생각한다."
+          }
+        ],
+        "related_movies": [
+          {
+            "id": 2,
+            "image": "https://an2-img.amz.wtchn.net/image/v1/watcha/image/upload/c_fill,h_700,q_80,w_490/v1466086567/xcm6yhz3gjvjixtrycjf.jpg",
+            "title": "건축학개론",
+            "average_stars": "3.0",
+            "logo": true
+          }
+        ],
+        "rating_amount": 4000.0
+      },
+      {
+        "id": 2,
+        "title": "건축학개론",
+        "image": "https://an2-img.amz.wtchn.net/image/v1/watcha/image/upload/c_fill,h_700,q_80,w_490/v1466086567/xcm6yhz3gjvjixtrycjf.jpg",
+        "logo": false,
+        "nationality": "한국",
+        "release_date": "2012-03-22",
+        "average_stars": 3.0,
+        "number_of_audience": 30000,
+        "movie_rating": 90000.0,
+        "main_image": "https://an2-img.amz.wtchn.net/image/v1/watcha/image/upload/c_fill,h_700,q_80,w_490/v1466086567/xcm6yhz3gjvjixtrycjf.jpg",
+        "korean_title": "건축학개론",
+        "release_data": "2012-03-22",
+        "genre": "SF",
+        "num_of_stars": "2,587",
+        "running_time": "113",
+        "description": "콩과 콩의 보호자들은 그가 정착할 수 있는 곳을 찾아 콩과 특별하고 강력한 유대감을 형성하고 있는 고아 소녀 지아와 함께 위험한 여정을 떠나게 된다. 그러던 중 지구 파괴를 위한 회심의 날을 휘두르는 분노에 찬 고질라와 마주하게 되고, 보이지 않는 힘에 의해 마침내 맞붙게 된 두 전설의 장대한 대결은 지구 깊은 곳에 도사린 수수께끼의 시작에 불가할 뿐이었는데…",
+        "panels": [
+          {
+            "profile": "/images/actor.jpg",
+            "actor": "김우영",
+            "role": "감독",
+            "character": "요다"
+          },
+          {
+            "profile": "/images/actor.jpg",
+            "actor": "김우영",
+            "role": "감독",
+            "character": "요다"
+          },
+          {
+            "profile": "/images/actor.jpg",
+            "actor": "김우영",
+            "role": "감독",
+            "character": "요다"
+          }
+        ],
+        "galleries": [
+          "/images/movieDetail.jpg",
+          "https://an2-img.amz.wtchn.net/image/v1/watcha/image/upload/c_fill,h_700,q_80,w_490/v1466086567/xcm6yhz3gjvjixtrycjf.jpg",
+          "/images/MovieName.jpg",
+          "/images/actor.jpg",
+          "/images/movieDetail.jpg",
+          "/images/MovieName.jpg"
+        ],
+        "star_graph": { "5": 1, "4": 2, "3": 0, "2": 8, "1": 4 },
+        "comments": [
+          {
+            "user": "그라시아스",
+            "user_star": "3.0",
+            "like": "123",
+            "content": "운 좋게 아이맥스에서 보게 되었는데 마치 두마리 괴수가 정말 내 앞에서 싸우는 거 같은 체험을 하게 만든다 cg와 액션은 물론이고 진짜 음향소리가.... 영화는 극장에서 봐야한다지만 특히나 이 영화는 반드시 극장에서 그것도 아이맥스같은 상영관에서 봐야 그 진가를 제대로 발휘한다고 생각한다."
+          }
+        ],
+        "related_movies": [
+          {
+            "id": 1,
+            "image": "/images/movieName.jpg",
+            "title": "스타워즈",
+            "average_stars": "4.2",
+            "logo": true
+          }
+        ],
+        "rating_amount": 4000.0
+      },
+      {
+        "id": 3,
+        "title": "파수꾼",
+        "image": "https://an2-img.amz.wtchn.net/image/v1/watcha/image/upload/c_fill,h_700,q_80,w_490/v1466060983/rkrkzjyt4fae81eoojhb.jpg",
+        "logo": false,
+        "nationality": "한국",
+        "release_date": "2019-01-01",
+        "average_stars": 2.0,
+        "number_of_audience": 41000,
+        "movie_rating": 82000.0
+      },
+      {
+        "id": 4,
+        "title": "벌새",
+        "image": "https://an2-img.amz.wtchn.net/image/v1/watcha/image/upload/c_fill,h_700,q_80,w_490/v1563830564/kcwvlxvq6hlnioxfa7rq.jpg",
+        "logo": false,
+        "nationality": "한국",
+        "release_date": "2019-01-01",
+        "average_stars": 3.0,
+        "number_of_audience": 23000,
+        "movie_rating": 69000.0
+      },
+      {
+        "id": 5,
+        "title": "노바디",
+        "image": "https://an2-img.amz.wtchn.net/image/v2/c41f40cf087a7740f9c27eee7277c574.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFME5qWTRNelUzTkRJNE5USTFPRFV5SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LjRZLXMtamVXNF9OVjR3VXloVkY4QjRfUWxfZ2NRSWp2YU1RbjkyMDg0WWM",
+        "logo": false,
+        "nationality": "미국",
+        "release_date": "2019-01-01",
+        "average_stars": 3.0,
+        "number_of_audience": 3000,
+        "movie_rating": 9000.0
+      },
+      {
+        "id": 6,
+        "title": "자산어보",
+        "image": "https://an2-img.amz.wtchn.net/image/v2/a2c4ecb107a0e7678ac29fca25994d0b.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFek56RTNPVEl6TlRneE56RTBOVGd3SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LkJsd2x4SC1hdnhxRjJUVlVXT1l0MXhNbGU0dW5pODJ1bU5tZWFSdkpMV3M",
+        "logo": false,
+        "nationality": "한국",
+        "release_date": "2019-01-01",
+        "average_stars": 3.0,
+        "number_of_audience": 2000,
+        "movie_rating": 6000.0
+      },
+      {
+        "id": 7,
+        "title": "귀멸의 칼날",
+        "image": "https://an2-img.amz.wtchn.net/image/v2/bcbeef6a4c17508a5e18ca6b63246344.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFeE9UQTJOakkxTWpFek1UVXdOemt4SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5Lnd2bjJJQXk4cmVSWXdNWFdERnk0QkRsZjN0ZFNQWUo1N1NoTEJiRWN3Ums",
+        "logo": false,
+        "nationality": "일본",
+        "release_date": "2019-01-01",
+        "average_stars": 2.0,
+        "number_of_audience": 2000,
+        "movie_rating": 4000.0
+      },
+      {
+        "id": 8,
+        "title": "스왈로우",
+        "image": "https://an2-img.amz.wtchn.net/image/v2/a927528b3f159d3ca2a9ee7504cfd8a1.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFMk5qVXlPRGN4TlRBNU5qRTFPRGcxSWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LmZzaXQ3RkVDYXlHMFhERUpfV0x1UVc2NzFrTmRyeHBXTUVTbWtKMHJacFU",
+        "logo": false,
+        "nationality": "프랑스",
+        "release_date": "2019-01-01",
+        "average_stars": 4.0,
+        "number_of_audience": 1000,
+        "movie_rating": 4000.0
+      },
+      {
+        "id": 9,
+        "title": "콩 vs 고질라",
+        "image": "https://an2-img.amz.wtchn.net/image/v2/24b8b07683cb530f082ad075bb4a8eff.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFMU56Y3lNVE0zTURjME5UVXlOakkxSWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LjY1MG1EeEM0akYtTDJXS0pXVE8yVGoyOFZNX3hicFBKM2plbnU3dG5kMkU",
+        "logo": false,
+        "nationality": "미국",
+        "release_date": "2019-01-01",
+        "average_stars": 4.0,
+        "number_of_audience": 30000,
+        "movie_rating": 120000.0
+      },
+      {
+        "id": 10,
+        "title": "건축학개론",
+        "image": "https://an2-img.amz.wtchn.net/image/v1/watcha/image/upload/c_fill,h_700,q_80,w_490/v1466086567/xcm6yhz3gjvjixtrycjf.jpg",
+        "logo": false,
+        "nationality": "한국",
+        "release_date": "2019-01-01",
+        "average_stars": 3.0,
+        "number_of_audience": 30000,
+        "movie_rating": 90000.0
+      },
+      {
+        "id": 11,
+        "title": "파수꾼",
+        "image": "https://an2-img.amz.wtchn.net/image/v1/watcha/image/upload/c_fill,h_700,q_80,w_490/v1466060983/rkrkzjyt4fae81eoojhb.jpg",
+        "logo": false,
+        "nationality": "한국",
+        "release_date": "2019-01-01",
+        "average_stars": 2.0,
+        "number_of_audience": 41000,
+        "movie_rating": 82000.0
+      },
+      {
+        "id": 12,
+        "title": "벌새",
+        "image": "https://an2-img.amz.wtchn.net/image/v1/watcha/image/upload/c_fill,h_700,q_80,w_490/v1563830564/kcwvlxvq6hlnioxfa7rq.jpg",
+        "logo": false,
+        "nationality": "한국",
+        "release_date": "2019-01-01",
+        "average_stars": 3.0,
+        "number_of_audience": 23000,
+        "movie_rating": 69000.0
+      },
+      {
+        "id": 13,
+        "title": "노바디",
+        "image": "https://an2-img.amz.wtchn.net/image/v2/c41f40cf087a7740f9c27eee7277c574.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFME5qWTRNelUzTkRJNE5USTFPRFV5SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LjRZLXMtamVXNF9OVjR3VXloVkY4QjRfUWxfZ2NRSWp2YU1RbjkyMDg0WWM",
+        "logo": false,
+        "nationality": "미국",
+        "release_date": "2019-01-01",
+        "average_stars": 3.0,
+        "number_of_audience": 3000,
+        "movie_rating": 9000.0
+      },
+      {
+        "id": 14,
+        "title": "자산어보",
+        "image": "https://an2-img.amz.wtchn.net/image/v2/a2c4ecb107a0e7678ac29fca25994d0b.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFek56RTNPVEl6TlRneE56RTBOVGd3SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LkJsd2x4SC1hdnhxRjJUVlVXT1l0MXhNbGU0dW5pODJ1bU5tZWFSdkpMV3M",
+        "logo": false,
+        "nationality": "한국",
+        "release_date": "2019-01-01",
+        "average_stars": 3.0,
+        "number_of_audience": 2000,
+        "movie_rating": 6000.0
+      },
+      {
+        "id": 15,
+        "title": "귀멸의 칼날",
+        "image": "https://an2-img.amz.wtchn.net/image/v2/bcbeef6a4c17508a5e18ca6b63246344.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFeE9UQTJOakkxTWpFek1UVXdOemt4SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5Lnd2bjJJQXk4cmVSWXdNWFdERnk0QkRsZjN0ZFNQWUo1N1NoTEJiRWN3Ums",
+        "logo": false,
+        "nationality": "일본",
+        "release_date": "2019-01-01",
+        "average_stars": 2.0,
+        "number_of_audience": 2000,
+        "movie_rating": 4000.0
+      },
+      {
+        "id": 16,
+        "title": "스왈로우",
+        "image": "https://an2-img.amz.wtchn.net/image/v2/a927528b3f159d3ca2a9ee7504cfd8a1.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFMk5qVXlPRGN4TlRBNU5qRTFPRGcxSWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LmZzaXQ3RkVDYXlHMFhERUpfV0x1UVc2NzFrTmRyeHBXTUVTbWtKMHJacFU",
+        "logo": false,
+        "nationality": "프랑스",
+        "release_date": "2019-01-01",
+        "average_stars": 4.0,
+        "number_of_audience": 1000,
+        "movie_rating": 4000.0
+      }
+    ],
+    "watcha_movie": [
+      {
+        "id": 1,
+        "title": "콩 vs 고질라",
+        "image": "https://an2-img.amz.wtchn.net/image/v2/24b8b07683cb530f082ad075bb4a8eff.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFMU56Y3lNVE0zTURjME5UVXlOakkxSWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LjY1MG1EeEM0akYtTDJXS0pXVE8yVGoyOFZNX3hicFBKM2plbnU3dG5kMkU",
+        "logo": true,
+        "nationality": "미국",
+        "release_date": "2019-01-01",
+        "average_stars": 4.0,
+        "number_of_audience": 30000,
+        "movie_rating": 120000.0
+      },
+      {
+        "id": 2,
+        "title": "건축학개론",
+        "image": "https://an2-img.amz.wtchn.net/image/v1/watcha/image/upload/c_fill,h_700,q_80,w_490/v1466086567/xcm6yhz3gjvjixtrycjf.jpg",
+        "logo": true,
+        "nationality": "한국",
+        "release_date": "2019-01-01",
+        "average_stars": 3.0,
+        "number_of_audience": 30000,
+        "movie_rating": 90000.0
+      },
+      {
+        "id": 3,
+        "title": "파수꾼",
+        "image": "https://an2-img.amz.wtchn.net/image/v1/watcha/image/upload/c_fill,h_700,q_80,w_490/v1466060983/rkrkzjyt4fae81eoojhb.jpg",
+        "logo": true,
+        "nationality": "한국",
+        "release_date": "2019-01-01",
+        "average_stars": 2.0,
+        "number_of_audience": 41000,
+        "movie_rating": 82000.0
+      },
+      {
+        "id": 4,
+        "title": "벌새",
+        "image": "https://an2-img.amz.wtchn.net/image/v1/watcha/image/upload/c_fill,h_700,q_80,w_490/v1563830564/kcwvlxvq6hlnioxfa7rq.jpg",
+        "logo": true,
+        "nationality": "한국",
+        "release_date": "2019-01-01",
+        "average_stars": 3.0,
+        "number_of_audience": 23000,
+        "movie_rating": 69000.0
+      },
+      {
+        "id": 5,
+        "title": "노바디",
+        "image": "https://an2-img.amz.wtchn.net/image/v2/c41f40cf087a7740f9c27eee7277c574.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFME5qWTRNelUzTkRJNE5USTFPRFV5SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LjRZLXMtamVXNF9OVjR3VXloVkY4QjRfUWxfZ2NRSWp2YU1RbjkyMDg0WWM",
+        "logo": true,
+        "nationality": "미국",
+        "release_date": "2019-01-01",
+        "average_stars": 3.0,
+        "number_of_audience": 3000,
+        "movie_rating": 9000.0
+      },
+      {
+        "id": 6,
+        "title": "자산어보",
+        "image": "https://an2-img.amz.wtchn.net/image/v2/a2c4ecb107a0e7678ac29fca25994d0b.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFek56RTNPVEl6TlRneE56RTBOVGd3SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LkJsd2x4SC1hdnhxRjJUVlVXT1l0MXhNbGU0dW5pODJ1bU5tZWFSdkpMV3M",
+        "logo": true,
+        "nationality": "한국",
+        "release_date": "2019-01-01",
+        "average_stars": 3.0,
+        "number_of_audience": 2000,
+        "movie_rating": 6000.0
+      },
+      {
+        "id": 7,
+        "title": "귀멸의 칼날",
+        "image": "https://an2-img.amz.wtchn.net/image/v2/bcbeef6a4c17508a5e18ca6b63246344.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFeE9UQTJOakkxTWpFek1UVXdOemt4SWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5Lnd2bjJJQXk4cmVSWXdNWFdERnk0QkRsZjN0ZFNQWUo1N1NoTEJiRWN3Ums",
+        "logo": true,
+        "nationality": "일본",
+        "release_date": "2019-01-01",
+        "average_stars": 2.0,
+        "number_of_audience": 2000,
+        "movie_rating": 4000.0
+      },
+      {
+        "id": 8,
+        "title": "스왈로우",
+        "image": "https://an2-img.amz.wtchn.net/image/v2/a927528b3f159d3ca2a9ee7504cfd8a1.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPamN3TUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpFMk5qVXlPRGN4TlRBNU5qRTFPRGcxSWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqbzBPVEI5LmZzaXQ3RkVDYXlHMFhERUpfV0x1UVc2NzFrTmRyeHBXTUVTbWtKMHJacFU",
+        "logo": true,
+        "nationality": "프랑스",
+        "release_date": "2019-01-01",
+        "average_stars": 4.0,
+        "number_of_audience": 1000,
+        "movie_rating": 4000.0
+      }
+    ],
+    "rating_amount": 20
   }
-]
+}
